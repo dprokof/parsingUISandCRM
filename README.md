@@ -24,3 +24,18 @@ Great! You can used it
 
 <h3>How to used it</h3>
 <br />
+
+```
+def get_projectnames():
+    projectnames = []
+    time.sleep(0.01)
+    responsedata = requests.get('https://mytp.online/api/v1/project/list',verify=False, allow_redirects=True, headers={
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+    })
+    if responsedata.status_code == 200:
+        responsedata = responsedata.json()
+        for elem in responsedata['result']:
+            projectnames.append(elem)
+    return projectnames
+```
+The script works with a list of notification (projectname). In this code the list of projectnames is taken from customer's CRM system. 
