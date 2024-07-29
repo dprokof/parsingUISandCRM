@@ -29,7 +29,7 @@ Great! You can used it
 def get_projectnames():
     projectnames = []
     time.sleep(0.01)
-    responsedata = requests.get('https://mytp.online/api/v1/project/list',verify=False, allow_redirects=True, headers={
+    responsedata = requests.get('url from CRM method>',verify=False, allow_redirects=True, headers={
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
     })
     if responsedata.status_code == 200:
@@ -38,4 +38,5 @@ def get_projectnames():
             projectnames.append(elem)
     return projectnames
 ```
-The script works with a list of notification (projectname). In this code the list of projectnames is taken from customer's CRM system. 
+The script works with a list of notification (projectname). In this code the list of projectnames is taken from customer's CRM system. <br />
+You can used simple array without requests.get if you know a number of notification. <br />
