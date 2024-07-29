@@ -40,3 +40,31 @@ def get_projectnames():
 ```
 The script works with a list of notification (projectname). In this code the list of projectnames is taken from customer's CRM system. <br />
 You can used simple array without requests.get if you know a number of notification. <br />
+
+```
+data_frame = {
+            'projectname': projectname,
+            'order_status': order_status,
+            'start_amount': start_amount,
+            'date_sign': date_sign,
+            'date_off': date_off,
+            'date_registr': date_registr,
+            'update_registr': update_registr,
+            'customer_name': customer_name,
+            'contract_number': contract_number,
+            'contract_status': contract_status,
+            'contract_amount': contract_amount,
+            'amount_executed': amount_executed,
+            'amount_actually_paid': amount_actually_paid
+        }
+
+        header = {
+            'Content-Type': 'application/json'
+        }
+        try:
+            requests.post(<'url from CRM>', headers=header, json=data_frame)
+        except Exception as ex:
+            print(ex)
+```
+
+The result of the script is a dataframe, which in my case is sent using a post request<br />
