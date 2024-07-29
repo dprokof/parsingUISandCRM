@@ -10,6 +10,7 @@ You need to install requirements.txt
 pip install -r requirements.txt
 
 ```
-You also need to install a driver that will match your browser version. You can find it at this: https://developer.chrome.com/docs/chromedriver/downloads?hl=ru
+You also need to install a driver that will match your browser version. You can find it at this: https://developer.chrome.com/docs/chromedriver/downloads?hl=ru <br />
 Add path to chromedriver to main.py. 
+
 
