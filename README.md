@@ -13,4 +13,14 @@ pip install -r requirements.txt
 You also need to install a driver that will match your browser version. You can find it at this: https://developer.chrome.com/docs/chromedriver/downloads?hl=ru <br />
 Add path to chromedriver to main.py. 
 
+```
+def get_data(projectname):
+    try:
+        service = ChromeService(executable_path='<path_for_your_chromedriver')
 
+```
+<br />
+Great! You can used it
+
+<h3>How to used it</h3>
+<br />
