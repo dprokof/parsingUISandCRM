@@ -149,7 +149,7 @@ def get_data(projectname):
             'Content-Type': 'application/json'
         }
         try:
-            requests.post('https://mytp.online/api/v1/project/update', headers=header, json=data_frame)
+            requests.post(<'url from CRM>', headers=header, json=data_frame)
         except Exception as ex:
             print(ex)
         print(data_frame)
